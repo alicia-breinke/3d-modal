@@ -10,36 +10,79 @@
     <script src="https://unpkg.com/intersection-observer@0.5.1/intersection-observer.js"></script>
     <script src="https://unpkg.com/resize-observer-polyfill@1.5.1/dist/ResizeObserver.js"></script>
 <!-- These controls the size and shape of the model viewer window. It can be housed in you CSS as well. -->
-    <style>      
-    model-viewer {
-      margin: auto;
-      width: 75%;
-      height: 400px;
-      }
-    p {
-      color: black;
-      text-align: center;
-      }
-    h1 {
-      font-style: bold;
-      color: black;
-      text-align: center;  
-      }
+    <style>
+    body {
+      background-color: rgb(233,236,217);
+    }
+
+model-viewer {
+  float: left;
+  margin: 1%;
+  width: 45%;
+  height: 400px;
+}
+
+header {
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  font-style: italic;
+  font-weight: bold;
+  font-family: sans-serif;
+  font-size: 30px;
+  text-align: center;
+  color: inherit;
+}
+
+.section {
+  float: left;
+  margin-left: 1%;
+  margin-right: 0;
+  margin-top: 1%;
+  margin-bottom: 5%;
+  width: 90%;
+  height: auto;
+}
+
+h1 {
+  font-style: normal;
+  font-weight: bold;
+  font-family: sans-serif;
+  font-size: 30px;
+  text-align: left;
+}
+
+p {
+  font-style: normal;
+  font-weight: normal;
+  font-family: sans-serif;
+  font-size: 30px;
+  text-align: justify;
+}
   </style>
-  </head> 
+  </head>
   <body>
-    <h1>
-    Art 107 Embedded 3D<br>Model Example  
-    </h1>
-    <p>Below is the model viewer object.</p>
+
+      <header>Guiding Lights</header>
 <!-- This is the model veiwer element, inside of which I place the path to the model. -->
-    <model-viewer src="https://cdn.glitch.com/4a071b39-0bf7-4634-807c-8cd70364df8b%2Fscene-day.gltf?v=1602186321129" 
-                  alt="A 3D model of an astronaut"
-                
-                  >
-    </model-viewer>
-    <p>The viewer can be placed like any other HTML assest.</p>
+<model-viewer camera-controls skybox-image="https://cdn.glitch.com/4a071b39-0bf7-4634-807c-8cd70364df8b%2Fday.jpg?v=1602215929898" src="https://cdn.glitch.com/4a071b39-0bf7-4634-807c-8cd70364df8b%2Fscene-day.gltf?v=1602186321129"
+               alt="image of day"
+               >
+               </model-viewer>
+ <model-viewer camera-controls skybox-image="https://cdn.glitch.com/4a071b39-0bf7-4634-807c-8cd70364df8b%2Fnight.jpg?v=1602215518642" src="https://cdn.glitch.com/4a071b39-0bf7-4634-807c-8cd70364df8b%2Fscene-day.gltf?v=1602186321129"
+               alt="image of night"
+               >
+ </model-viewer>
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js"></script>
     <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+
+<div class="section">
+  <h1>Artist Statement</h1>
+  <p><i>Guiding Lights</i> is a project that was inspired by the grueling exodus of Yeonmi Park, after she escaped from North Korea for the hopes of a better future.  The project is meant to trace some of her trials, of going through mountains and the Mongolian Desert, before arriving in South Korea.  I also wanted to represent the guidance of the North Star and other cosmic objects, which provided guidance during this uncertain time in her life.</p>
+</div>
+
+</div>
+
 </body>
 </html>
